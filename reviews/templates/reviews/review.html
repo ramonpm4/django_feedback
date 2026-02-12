@@ -6,14 +6,10 @@
     <title>Your Review</title>
 </head>
 <body>
-    <form action="/"  method="POST">
+    <form action="/"  method="POST" novalidate>
         {% csrf_token %}
-        <label for="username">Your name</label>
-        <input id="username" name="username" type="text">
+        {{ form }}
         <button>Send</button>
-        {% if has_error %}
-        <p>This username is not allowed. Please enter a valid username</p>
-        {% endif %}
     </form>
 </body>
 </html>
