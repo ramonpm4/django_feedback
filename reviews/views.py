@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def review(request) -> HttpResponse:
     return render(request, 'reviews/review.html')
+
+
+def thank_you(request) -> HttpResponse:
+    return render(request, 'reviews/thank_you.html')
