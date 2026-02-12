@@ -11,6 +11,9 @@
         <label for="username">Your name</label>
         <input id="username" name="username" type="text">
         <button>Send</button>
+        {% if has_error %}
+        <p>This username is not allowed. Please enter a valid username</p>
+        {% endif %}
     </form>
 </body>
 </html>
