@@ -13,5 +13,10 @@ class ReviewForm(forms.ModelForm):
     
     class Meta:
         model = Review 
-        fields = '__all__' # Puedo en una lista decir cuales incluir.
-        # exclude = ['col_name'] O puedo decirle que columnas quiero que excluya en el form.
+        fields = '__all__' #            Puedo en una lista decir cuales incluir.
+        # exclude = ['col_name']        O puedo decirle que columnas quiero que excluya en el form.
+        labels = {
+            'user_name': 'Your Name',
+            'review_text': 'Your Review',
+            'rating': 'Your Rating',
+        }
