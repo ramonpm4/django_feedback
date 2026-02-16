@@ -20,3 +20,9 @@ class ReviewForm(forms.ModelForm):
             'review_text': 'Your Review',
             'rating': 'Your Rating',
         }
+        error_messages = {
+            'user_name': {
+                'required': 'This field is required motherfucker!',
+                'max_length': 'Your name is too long.'
+            }
+        }
