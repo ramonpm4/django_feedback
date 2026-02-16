@@ -30,7 +30,7 @@ class ReviewView(View):
         })
 
 
-class ThankYouView(View):
-    def get(self, request) -> HttpResponse:
-        return render(request, 'reviews/thank_you.html')
+class ThankYouView(TemplateView):
+    template_name = 'reviews/thank_you.html'
+
 
