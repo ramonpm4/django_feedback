@@ -2,4 +2,4 @@
 from django import forms
 
 class ProfileForm(forms.Form):
-    user_image = forms.FileField() # Form control for accepting files.
+    user_image = forms.ImageField() # Form control for accepting files.
