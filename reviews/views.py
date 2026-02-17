@@ -5,21 +5,20 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, CreateView
 
 from .forms import ReviewForm
 from .models import Review
 
 # Create your views here.
 
-class ReviewView(FormView):
+class ReviewView(CreateView):
+    model = Review
     form_class = ReviewForm
     template_name = 'reviews/review.html'
     success_url = 'thank-you'
     
-    def form_valid(self, form) -> HttpResponse:
-        form.save()
-        return super().form_valid(form)
+
     
 
     # def post(self, request) -> HttpResponseRedirect | HttpResponse:
