@@ -1,5 +1,5 @@
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
 
@@ -11,4 +11,5 @@ class CreateProfileView(View):
         return render(request, "profiles/create_profile.html")
 
     def post(self, request) -> None:
-        pass
+        print(request.FILES['image'])
+        return HttpResponseRedirect('/profiles') # type: ignore
