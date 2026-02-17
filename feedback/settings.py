@@ -119,3 +119,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 MEDIA_ROOT = BASE_DIR / 'uploads' # Construye el absolute path al uploads folder.
+
+MEDIA_URL = "/user-media/"
